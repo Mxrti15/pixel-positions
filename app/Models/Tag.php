@@ -10,6 +10,11 @@ class Tag extends Model
 {
     use HasFactory;
 
+    /**
+     * Relación: Una etiqueta puede estar asociada a muchos trabajos.
+     *
+     * @return BelongsToMany Relación con el modelo Job.
+     */
     public function jobs(): BelongsToMany
     {
         return $this->belongsToMany(Job::class);

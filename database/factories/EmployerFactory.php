@@ -6,21 +6,23 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
+ * Fábrica para generar instancias del modelo Employer con datos aleatorios.
+ *
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Employer>
  */
 class EmployerFactory extends Factory
 {
     /**
-     * Define the model's default state.
+     * Define el estado por defecto del modelo.
      *
-     * @return array<string, mixed>
+     * @return array<string, mixed> Datos generados para el modelo Employer.
      */
     public function definition(): array
     {
         return [
-            'name' => fake()->company(),
-            'logo' => fake()->imageUrl(),
-            'user_id' => User::factory(),
+            'name' => fake()->company(), // Genera un nombre de empresa aleatorio
+            'logo' => fake()->imageUrl(), // Genera una URL aleatoria para la imagen del logo
+            'user_id' => User::factory(), // Asigna un usuario generado por la fábrica de usuarios
         ];
     }
 }
