@@ -25,7 +25,6 @@ class JobFactory extends Factory
             'schedule' => 'Full Time',
             'url' => fake()->url,
             'featured' => false,
-            'employer_id' => Employer::factory(),  // Crear un employer automáticamente
         ];
     }
 }
